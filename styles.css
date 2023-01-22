@@ -114,6 +114,10 @@ a {
   font-weight: 600;
 }
 
+.list-items a:hover {
+  color: #FFC93C; 
+}
+
 li {
   line-height: 30px;
   font-weight: 500;
