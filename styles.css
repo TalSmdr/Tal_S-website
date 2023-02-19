@@ -57,145 +57,209 @@
     align-items: center;
   }
 
-  .grid-container {
-    display: -webkit-flex;
-    display: flex; /* display next to each other */
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); 3 columns */
-    padding: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .grid-item {
-    /* text-align: center; */
-    height: 300px;
-    margin: 15px;
-    background-image: url(images/pexels-pavel-danilyuk-7521055.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; /* display next to each other */
-    position: relative;
-  }
-
-  .grid-item a {
-    color: #f2f2f2;
-    font-size: 50px;
-    text-align: center;
-    text-shadow: 2px 1px 8px #111;
-    display: flex;
-    justify-content: center;
+  .arrow-down {
     position: absolute;
-    top: 50%;
+    bottom: 10px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid white;
+    z-index: 2;
+    padding-bottom: 30px;
   }
 
-  header .logo {
-    font-size: 24px;
-    font-weight: 900;
-    color: #111;
-    text-transform: uppercase;
-    display: block;
-    margin: 0, auto;
-    text-align: center;
-    padding: 10px 0;
-  }
+  border-top: 10px solid white;
+}
 
-  footer {
-    height: 120px;
-    background-color: #100303;
-    color: #ffffff;
-    padding: 30px;
-  }
+.grid-container {
+  display: -webkit-flex;
+  display: flex;
+  /* display next to each other */
+  /* display: grid;
+    grid-template-columns: repeat(3, 1fr); 3 columns */
+  padding: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  .list-items ul {
-    list-style-type: none;
-  }
+.grid-item {
+  /* text-align: center; */
+  height: 300px;
+  margin: 15px;
+  background-image: url(images/pexels-pavel-danilyuk-7521055.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  /* display next to each other */
+  position: relative;
+}
 
-  a {
-    color: #f2f2f2;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
+.grid-item a {
+  color: #f2f2f2;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 1px 8px #111;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .list-items a:hover {
-    color: #FFC93C;
-  }
+header .logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #111;
+  text-transform: uppercase;
+  display: block;
+  margin: 0, auto;
+  text-align: center;
+  padding: 10px 0;
+}
 
-  li {
-    line-height: 30px;
-    font-weight: 500;
-  }
+footer {
+  height: 120px;
+  background-color: #100303;
+  color: #ffffff;
+  padding: 30px;
+}
 
-  .copyright {
-    padding-top: 20px;
-  }
+.list-items ul {
+  list-style-type: none;
+}
 
-  .about-me-image-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: calc(100vh - 107px);
-  }
+a {
+  color: #f2f2f2;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 
-  .about-img {
-    z-index: 1;
-    width: 500px;
-    margin-right: 600px;
-  }
+.list-items a:hover {
+  color: #FFC93C;
+}
 
-  .text-container {
-    position: absolute;
-    padding: 100px;
-    padding-left: 1000px;
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    background: #1B2A49;
-    background-size: 10px;
-    color: #F3F3F3;
-    font-size: 13px;
-  }
+li {
+  line-height: 30px;
+  font-weight: 500;
+}
 
-  h1 {
-    margin-bottom: 10px;
-  }
+.copyright {
+  padding-top: 20px;
+}
+
+.about-me-image-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 107px);
+}
+
+.about-img {
+  z-index: 1;
+  width: 500px;
+  margin-right: 600px;
+}
+
+.about-text-container {
+  position: absolute;
+  padding: 150px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  background: #1B2A49;
+  color: #F3F3F3;
+  font-size: 13px;
+}
+
+.about-text-container p {
+  margin-left: 50%;
+  float: right;
+}
+
+.about-text-container h1 {
+  margin-bottom: 10px;
+  margin-left: 50%;
+}
+
+/* contact page */
 
 .contact-container {
-    display: flex;
-    flex-direction: column; /* set the h1 above the form */
-    align-items: center;
-    justify-content: center;
-    background-color: #FFC93C;
-    width: 100%;
-    height: calc(100vh - 107px);
-  }
+  height: calc(100vh - 110px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.index-contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .contact-container h1 {
-  order: -1; /* set the h1 above the form */
-  width: 30%;
   text-align: center;
   font-size: 36px;
   text-transform: uppercase;
-
+  margin-bottom: 50px;
+  color: #333;
 }
 
 .contact-form {
-  width: 30%;
-  line-height: 50px;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
 
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #FFC93C;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #FFC93C;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #FFB300;
+}
 
 }
